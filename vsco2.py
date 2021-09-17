@@ -53,6 +53,10 @@ def analyze_profile(model, profile: str, sample_proportion: float = 0.2, floor: 
         else:
             logging.info(f"NO NSFW FOUND, "
                          f"pics scanned: {int(len(images) * sample_proportion)}")
+            if os.getcwd() != started_dir:
+                directory = os.getcwd()
+                os.chdir(started_dir)
+                os.rmdir(directory)
     except Exception as e:
         logging.error(e)
         raise
