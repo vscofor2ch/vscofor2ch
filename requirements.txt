@@ -1,7 +1,7 @@
 tqdm==4.62.2
 requests==2.25.1
 six==1.15.0
-absl==0.0
+absl-py==0.13.0
 keras==2.6.0
 matplotlib==3.4.3
 numpy==1.21.2
